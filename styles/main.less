@@ -1,0 +1,73 @@
+@import "variables.less";
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main {
+  &__title:extend(.flex) {
+    flex-direction: row;
+    margin-bottom: 5rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  select {
+    width: 10rem;
+    height: 2rem;
+    padding: 5px;
+    background: @dark;
+    color: @white;
+    @media @max768 {
+      margin-top: 1rem;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  &__card {
+    width: 15rem;
+    height: 20rem;
+    background-color: @dark;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+
+    &--img {
+      border-radius: 50%;
+      margin: -3rem 3rem 1.5rem 3rem;
+    }
+    &--desc:extend(.flex) {
+      width: 10rem;
+      flex-direction: column;
+      gap: 20px;
+      margin: auto;
+
+      p {
+        text-align: center;
+      }
+      :nth-child(3) {
+        color: @gray;
+      }
+    }
+
+    &--button {
+      width: 14rem;
+      height: 3rem;
+      background-color: @orange;
+      color: @white;
+      padding: 5px;
+      margin: 2.5rem 0.5rem 0rem 0.5rem;
+      border-radius: 10px;
+      font-size: medium;
+      .shadow();
+    }
+  }
+}

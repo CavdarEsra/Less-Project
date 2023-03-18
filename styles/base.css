@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+li {
+  list-style-type: none;
+}
+body {
+  background-color: #2D303E;
+  color: #fff;
+}
+.container {
+  padding: 4rem 9rem;
+}
