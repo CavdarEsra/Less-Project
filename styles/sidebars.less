@@ -11,8 +11,9 @@
 }
 
 .sidebar-left {
-  .sidebar(fixed,0, 100vh, 7vw, @dark , 1rem);
+  .sidebar(fixed,0, 100vh, 5vw, @dark , 1rem);
   left: 0;
+  min-width: 70px;
 }
 .logo {
   width: 4rem;
@@ -44,7 +45,6 @@
     height: 3rem;
     background-color: @bgColor;
     border-radius: 7px;
-    margin: auto;
     padding: 15px;
   }
   i {
@@ -56,9 +56,13 @@
     width: 100%;
     background-color: @bgColor;
     color: @white;
-    border-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
     height: 10vh;
     padding: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media (min-width: 1050px) and (max-width: 1300px) {
       padding: 28px 17px;
     }
@@ -71,6 +75,10 @@
     span {
       background-color: @orange;
       padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       .shadow();
       @media (max-width: 900px) {
         padding: 10px;
@@ -92,6 +100,7 @@
 
 .sidebar__right {
   .sidebar(fixed,0, 100vh, 7vw, @dark , 1rem);
+  min-width: 70px;
   right: 0;
   &--icon {
     width: 2.5rem;
