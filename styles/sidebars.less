@@ -1,19 +1,6 @@
 @import "variables.less";
 
 //mixin
-.sidebar(@position, @top,@height,@width,@color, @border) {
-  position: @position;
-  top: @top;
-  height: @height;
-  width: @width;
-  background-color: @color;
-  border-radius: @border;
-}
-.flex(@display,@align-items,@justify-content) {
-  display: @display;
-  align-items: @align-items;
-  justify-content: @justify-content;
-}
 
 .sidebar-left {
   .sidebar(fixed,0, 100vh, 5vw, @dark , 1rem);
@@ -21,8 +8,7 @@
   min-width: 70px;
 }
 .logo {
-  width: 4rem;
-  height: 4rem;
+  .size(4rem,4rem);
   background-color: @logoBg;
   border-radius: 5px;
   padding: 15px;
@@ -36,8 +22,7 @@
   height: 70vh;
   color: @orange;
   span {
-    width: 3rem;
-    height: 3rem;
+    .size(3rem,3rem);
     background-color: @bgColor;
     border-radius: 7px;
     padding: 15px;
@@ -48,12 +33,11 @@
 }
 .menu__icon {
   &.active {
-    width: 100%;
+    .size(100%,10vh);
     background-color: @bgColor;
     color: @white;
     border-bottom-left-radius: 1rem;
     border-top-left-radius: 1rem;
-    height: 10vh;
     padding: 27px;
     .flex(flex, center, center);
 
@@ -80,8 +64,7 @@
   min-width: 70px;
   right: 0;
   &--icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    .size(2.5rem,2.5rem);
     border-radius: 5px;
     margin: 3rem auto;
     color: @white;

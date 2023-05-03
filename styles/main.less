@@ -1,13 +1,8 @@
 @import "variables.less";
 
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .main {
-  &__title:extend(.flex) {
+  &__title {
+    .flex(flex, center, space-between);
     flex-direction: row;
     margin-bottom: 5rem;
 
@@ -17,8 +12,7 @@
     }
   }
   select {
-    width: 10rem;
-    height: 2rem;
+    .size(10rem,2rem);
     padding: 5px;
     background: @dark;
     color: @white;
@@ -27,16 +21,13 @@
     }
   }
   &__cards {
-    display: flex;
+    .flex(flex, center, space-around);
     flex-direction: row;
-    align-items: center;
     gap: 2rem 1rem;
     flex-wrap: wrap;
-    justify-content: space-around;
   }
   &__card {
-    width: 15rem;
-    height: 20rem;
+    .size(15rem,20rem);
     background-color: @dark;
     border-radius: 15px;
     margin-bottom: 2rem;
@@ -45,7 +36,8 @@
       border-radius: 50%;
       margin: -3rem 3rem 1.5rem 3rem;
     }
-    &--desc:extend(.flex) {
+    &--desc {
+      .flex(flex, center, space-between);
       width: 10rem;
       flex-direction: column;
       gap: 20px;
@@ -60,8 +52,7 @@
     }
 
     &--button {
-      width: 14rem;
-      height: 3rem;
+      .size(14rem,3rem);
       background-color: @orange;
       color: @white;
       padding: 5px;

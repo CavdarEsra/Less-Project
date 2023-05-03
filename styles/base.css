@@ -1,8 +1,11 @@
+.shadow {
+  box-shadow: rgba(192, 108, 12, 0.35) 0px 5px 15px;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 a {
   text-decoration: none;
@@ -12,9 +15,15 @@ li {
   list-style-type: none;
 }
 body {
-  background-color: #2D303E;
+  background-color: #2d303e;
   color: #fff;
 }
 .container {
   padding: 4rem 9rem;
+}
+@media (max-width: 962px) {
+  .container {
+    margin-left: -2rem;
+    margin-right: 2rem;
+  }
 }

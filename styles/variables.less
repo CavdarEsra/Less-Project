@@ -10,3 +10,21 @@
   box-shadow: rgba(192, 108, 12, 0.35) 0px 5px 15px;
 }
 @max768: ~"(max-width: 768px)";
+
+.sidebar(@position, @top,@height,@width,@color, @border) {
+  position: @position;
+  top: @top;
+  height: @height;
+  width: @width;
+  background-color: @color;
+  border-radius: @border;
+}
+.flex(@display,@align-items,@justify-content) {
+  display: @display;
+  align-items: @align-items;
+  justify-content: @justify-content;
+}
+.size(@width,@height) {
+  width: @width;
+  height: @height;
+}
